@@ -80,8 +80,15 @@ public class PrimitivesInformationAppl {
 	}
 
 	private static void printIntInfo() {
-		// TODO Auto-generated method stub
-		
+		int minValue = 1;
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = minValue * 2;
+			nBits = nBits + 1;
+		}
+		int maxValue = minValue - 1;
+		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n",
+				minValue, maxValue, nBits / 8);
 	}
 
 	private static void printLongInfo() {
