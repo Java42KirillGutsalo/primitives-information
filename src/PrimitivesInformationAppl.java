@@ -22,17 +22,49 @@ public class PrimitivesInformationAppl {
 		//for default there should be out: Wrong primitive type
 		// for each type there should be an appropriate method of printing information of the type
 		//for example, printCharInformation - method printing out the info about type "char"
-		char minValue = 1; 
-		char maxValue = 1;
-		int nBits = 1;
-		while(minValue > 0) {
-			minValue = (char) (minValue * 2);//compiler casts minValue to int, multiplies on 2 
-			nBits = nBits + 1;
-		}
-		maxValue = (char) (minValue - 1);
-		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n", (int)minValue, (int)maxValue, nBits / 8);
-		
+		switch (type) {
+		case "byte":
+			printByteInfo();
+			break;
+		case "char":
+			printCharInfo();
+			break;
+		case "short":
+			printShortInfo();
+			break;
+		case "int":
+			printIntInfo();
+			break;
+		case "long":
+			printLongInfo();
+			break;
+		default: System.out.printf("Wrong type: %s\n", type);
+			break;
+		}	
+	}
+
+	private static void printByteInfo() {
+		// TODO Auto-generated method stub
 		
 	}
 
+	private static void printCharInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void printShortInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void printIntInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private static void printLongInfo() {
+		// TODO Auto-generated method stub
+		
+	}
 }
