@@ -44,8 +44,15 @@ public class PrimitivesInformationAppl {
 	}
 
 	private static void printByteInfo() {
-		// TODO Auto-generated method stub
-		
+		byte minValue = 1;
+		int nBits = 1;
+		while(minValue > 0) {
+			minValue = (byte) (minValue * 2);
+			nBits = nBits + 1;
+		}
+		byte maxValue = (byte) (minValue - 1);
+		System.out.printf("minimal value is %d, maximal value is %d, number of bytes is %d\n",
+				minValue, maxValue, nBits / 8);
 	}
 
 	private static void printCharInfo() {
